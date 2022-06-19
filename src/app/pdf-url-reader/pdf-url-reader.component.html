@@ -1,0 +1,47 @@
+<div>
+  <div class="hero bg-base-200">
+    <div class="hero-content text-center">
+      <div class="">
+        <h1 class="text-5xl font-bold">How to download the StartList file ? </h1>
+        <div class="py-2">
+          <div class="text-sm breadcrumbs">
+            <ul>
+              <li><a href="https://www.ironman.com/">Go to ironman.com</a></li>
+              <li><a href="https://www.ironman.com/im703-nice-course">Choose your race</a></li>
+              <li><a href="https://www.ironman.com/im703-nice-athletes">Go to Athletes menu</a></li>
+              <li>Start List</li>
+              <li>Download the Start List file</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="form-control mt-4 mb-4">
+  <label class="input-group">
+    <span>Import</span>
+    <input type="file" (change)="previewFile()" accept="application/pdf" class="form-control
+    block
+    w-full
+    px-3
+    py-1.5
+    text-base
+    font-normal
+    text-gray-700
+    bg-white bg-clip-padding
+    border border-solid border-gray-300
+    rounded
+    transition
+    ease-in-out
+    m-0
+    focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"><br>
+  </label>
+</div>
+
+
+<div *ngIf="isLoading">
+  <p>Loading...</p>
+  <progress class="progress"></progress>
+</div>

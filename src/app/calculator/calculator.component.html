@@ -1,0 +1,93 @@
+<div class="stats  stats-vertical lg:stats-horizontal shadow">
+
+  <div class="stat">
+    <div class="stat-title">Total Participants</div>
+    <div class="stat-value text-info">{{totalParticipants}}</div>
+    <div class="stat-desc"></div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Total Slots</div>
+    <div class="stat-value">
+      <input type="number" class="input input-bordered" [(ngModel)]="nbSlots" (change)="updateNbSlot()"/>
+    </div>
+    <div class="stat-desc">
+      <a href="https://www.ironman.com/im-world-championship-2022-slot">Here how to know slot available for your race</a>
+    </div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Total Women</div>
+    <div class="stat-value">{{totalParticipantsFemale}}</div>
+    <div class="stat-desc">{{percentFemale}}%</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Total men</div>
+    <div class="stat-value">{{totalParticipantsMale}}</div>
+    <div class="stat-desc">{{percentMale}}%</div>
+  </div>
+  <div class="stat">
+    <div class="stat-title">Slots female</div>
+    <div class="stat-value text-secondary">{{slotsFemale}}</div>
+    <div class="stat-desc"></div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-title">Slots male</div>
+    <div class="stat-value text-accent">{{slotsMale}}</div>
+    <div class="stat-desc"></div>
+  </div>
+
+</div>
+
+
+<!--<div>-->
+<!--  <div class="form-control">-->
+<!--    <label class="label">-->
+<!--      <span class="label-text">Female %</span>-->
+<!--    </label>-->
+<!--    <label class="input-group">-->
+<!--      <span>%</span>-->
+<!--      <input type="number" disabled placeholder="45" class="input input-bordered" [(ngModel)]="percentFemale"/>-->
+<!--    </label>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--<div>-->
+<!--  <div class="form-control">-->
+<!--    <label class="label">-->
+<!--      <span class="label-text">Male %</span>-->
+<!--    </label>-->
+<!--    <label class="input-group">-->
+<!--      <span>%</span>-->
+<!--      <input type="number" disabled placeholder="45" class="input input-bordered" [(ngModel)]="percentMale"/>-->
+<!--    </label>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<div class="stats bg-primary text-primary-content">-->
+
+<!--  <div class="stat">-->
+<!--    <div class="stat-title">Slots female</div>-->
+<!--    <div class="stat-value">{{slotsFemale}}</div>-->
+<!--    <div class="stat-desc"></div>-->
+
+<!--  </div>-->
+
+<!--  <div class="stat">-->
+<!--    <div class="stat-title">Slots male</div>-->
+<!--    <div class="stat-value">{{slotsMale}}</div>-->
+<!--    <div class="stat-desc"></div>-->
+
+<!--  </div>-->
+
+<!--</div>-->
+
+<div class="grid lg:grid-cols-2 gap-4 grid-cols-1">
+  <app-table-age-group [totalParticipantsCat]="totalParticipantsFemale"
+                       [totalSlotsCat]="slotsFemale" [ageGroups]="femaleAgeGroup"></app-table-age-group>
+  <app-table-age-group [totalParticipantsCat]="totalParticipantsMale"
+                       [totalSlotsCat]="slotsMale" [ageGroups]="maleAgeGroup"></app-table-age-group>
+</div>

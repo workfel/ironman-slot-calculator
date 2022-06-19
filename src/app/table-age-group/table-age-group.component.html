@@ -1,0 +1,20 @@
+<div class="overflow-x-auto">
+  <table class="table w-full">
+    <!-- head -->
+    <thead>
+    <tr>
+      <th>Age group</th>
+      <th>Count participants</th>
+      <th>Count slots</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- row 1 -->
+    <tr *ngFor="let group of ageGroups ">
+      <th>{{group.label}}</th>
+      <td>{{group.count}}</td>
+      <td>{{ ((group.count / totalParticipantsCat) * totalSlotsCat).toFixed() }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

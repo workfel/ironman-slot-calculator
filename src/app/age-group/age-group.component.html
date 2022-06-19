@@ -1,0 +1,11 @@
+<div *ngFor="let group of ageGroups" class="p-4">
+  <div class="form-control">
+    <label class="input-group">
+      <span>{{sex.toUpperCase()}} {{group.from}} - {{group.to}}</span>
+      <input type="number" placeholder="45" class="input input-bordered" [(ngModel)]="group.nbParticipants"/>
+      <span> {{ ((group.nbParticipants / totalParticipantsCat) * totalSlotsCat).toFixed() }} slots</span>
+    </label>
+  </div>
+</div>
+
+
